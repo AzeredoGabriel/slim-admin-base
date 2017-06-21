@@ -1,10 +1,14 @@
+
+var pagesPath 			= "js/pages/"; 
+var modulesPath 		= "../modules/"; 
+var bowerComponentsPath = "../../bower_components/"; 
+
 requirejs.config({
-    "baseUrl": "js/modules",
+    "baseUrl": pagesPath,
     "paths": {
-        "jquery": "//code.jquery.com/jquery-2.1.1.min",
-        "main": "../main"
+        "jquery": bower_components + "jquery/dist/jquery.min.js",
     }
 });
 
 // Chamando módulo principal para iniciar a aplicação
-requirejs(["main"]);
+//requirejs(["main"]);

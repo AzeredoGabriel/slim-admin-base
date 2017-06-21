@@ -14,3 +14,8 @@
 {% block content %}
 	<h1>Meu nome é {{name}}</h1>
 {% endblock %}
+
+{% block scripts %}
+	{{ parent() }}
+	<script> requirejs(["pages/dashboard"]); </script>
+{% endblock %}

@@ -11,7 +11,7 @@
     <title>{% block title %}Sistema Admin Slim{% endblock %}</title>
         
     {% block styles %}
-        <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
@@ -41,22 +41,8 @@
         {% include 'partials/config-sidebar.html.twig' %}
         
     </div>
-    <!-- ./wrapper -->
-    <!-- jQuery 2.2.3 -->
-    <script src="../../plugins/jQuery/jquery-2.2.3.min.js"></script>
-    <!-- Bootstrap 3.3.6 -->
-    <script src="../../bootstrap/js/bootstrap.min.js"></script>
-    <!-- SlimScroll -->
-    <script src="../../plugins/slimScroll/jquery.slimscroll.min.js"></script>
-    <!-- FastClick -->
-    <script src="../../plugins/fastclick/fastclick.js"></script>
-    <!-- AdminLTE App -->
-    <script src="../../dist/js/app.min.js"></script>
-    <!-- AdminLTE for demo purposes -->
-    <script src="../../dist/js/demo.js"></script>
-
     {% block scripts %}
-        <script data-main="js/app" src="bower_components/requirejs/requirejs.js"></script>
+         <script data-main="js/app" src="bower_components/requirejs/require.js"></script>    
     {% endblock %}
 </body>
 
