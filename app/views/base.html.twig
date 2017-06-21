@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    <base href="public/">
+    
+    <title>{% block title %}Sistema Admin Slim{% endblock %}</title>
+        
+    {% block styles %}
+        <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+        
+        <link rel="stylesheet" href="css/adminlte/AdminLTE.min.css">
+        <link rel="stylesheet" href="css/adminlte/skin-black-light.min.css">
+        <link rel="stylesheet" href="css/custom.css">
+    {% endblock %}
+
+</head>
+
+<body class="hold-transition skin-blue sidebar-mini">
+    <!-- Site wrapper -->
+    <div class="wrapper">
+        
+        {% include 'partials/header.html.twig' %}
+        
+        {% include 'partials/sidebar.html.twig' %}
+        
+        <div class="content-wrapper">
+            {% block content %}{% endblock %}
+        </div>
+        <!-- /.content-wrapper -->
+        
+        {% include 'partials/footer.html.twig' %}
+        
+        {% include 'partials/config-sidebar.html.twig' %}
+        
+    </div>
+    <!-- ./wrapper -->
+    <!-- jQuery 2.2.3 -->
+    <script src="../../plugins/jQuery/jquery-2.2.3.min.js"></script>
+    <!-- Bootstrap 3.3.6 -->
+    <script src="../../bootstrap/js/bootstrap.min.js"></script>
+    <!-- SlimScroll -->
+    <script src="../../plugins/slimScroll/jquery.slimscroll.min.js"></script>
+    <!-- FastClick -->
+    <script src="../../plugins/fastclick/fastclick.js"></script>
+    <!-- AdminLTE App -->
+    <script src="../../dist/js/app.min.js"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="../../dist/js/demo.js"></script>
+
+    {% block scripts %}
+        <script data-main="js/app" src="bower_components/requirejs/requirejs.js"></script>
+    {% endblock %}
+</body>
+
+</html>
