@@ -10,7 +10,9 @@
 
     "autoload": {
 	    "psr-4": {
-	        "Controller\\": "app/controllers" 
+	        "Controller\\": "app/controllers",
+            "Middleware\\": "app/middlewares",
+            "Service\\": "app/services" 
 	    }
 	}
 }
