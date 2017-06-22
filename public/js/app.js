@@ -20,6 +20,7 @@ requirejs.config({
         "bootstrap"		:bowerComponentsPath 	+ "bootstrap/dist/js/bootstrap.min",
         "fastclick"		:bowerComponentsPath 	+ "fastclick/lib/fastclick",
         "slimscroll"	:bowerComponentsPath 	+ "jquery-slimscroll/jquery.slimscroll.min",
+        "handlebars"    :bowerComponentsPath    + "handlebars/handlebars.min",
         "adminlte"		:"adminlte/app.min",
         "demo"			:"adminlte/demo",
     }
