@@ -6,7 +6,7 @@
 
     "autoload": {
 	    "psr-4": {
-	        "Controller\\": "app/controllers"
+	        "Controller\\": "app/controllers" 
 	    }
 	}
 }
