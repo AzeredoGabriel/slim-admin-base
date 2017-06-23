@@ -1,9 +1,9 @@
 define(
-    ["jquery", "bootstrap", "handlebars" ,"slimscroll", "fastclick", "adminlte", "demo"],
+    ["jquery", "handlebars", "bootstrap","slimscroll", "fastclick", "adminlte", "demo"],
     
-    function($, bootstrap, handlebars) {
+    function($, handlebars) {
         $(document).ready(function() {
-        	//alert("Começando a brincadeira!"); 
+        	
         });
     }
 );

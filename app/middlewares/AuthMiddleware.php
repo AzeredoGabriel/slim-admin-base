@@ -2,7 +2,7 @@
 
 namespace Middleware; 
 
-class ExampleMiddleware
+class AuthMiddleware
 {
     /**
      * Example middleware invokable class
@@ -16,9 +16,6 @@ class ExampleMiddleware
     public function __invoke($request, $response, $next)
     {
         
-        print_r("pessoa não está logada!"); 
-        die(); 
-
         //$response->getBody()->write('BEFORE');
         $response = $next($request, $response);
         //$response->getBody()->write('AFTER');

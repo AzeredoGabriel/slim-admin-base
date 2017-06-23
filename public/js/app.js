@@ -5,15 +5,7 @@ var modulesPath 		= "modules/";
 var bowerComponentsPath = "../bower_components/"; 
 
 requirejs.config({
-    
-    /**
-     * JQuery e Bootstrap são dependências máximas do projeto, ou seja, todos os outros módulos e pluguins 
-     * só serão carregados depois desses dois.
-     */
-    shim: {
-        '*': ['jquery', 'bootstrap']
-    },
-
+  
     "baseUrl": basePath,
     "paths": {
         "jquery"		:bowerComponentsPath 	+ "jquery/dist/jquery.min",
@@ -23,9 +15,21 @@ requirejs.config({
         "handlebars"    :bowerComponentsPath    + "handlebars/handlebars.min",
         "adminlte"		:"adminlte/app.min",
         "demo"			:"adminlte/demo",
-    }
+    },
+
+    /**
+     * JQuery e Bootstrap são dependências máximas do projeto, ou seja, todos os outros módulos e pluguins 
+     * só serão carregados depois desses dois.
+     */
+    shim: {
+        'bootstrap' :['jquery']
+    },
+
 });
 
-// Chamando módulo principal para iniciar a aplicação
-if (requirejs_page)
-	requirejs([requirejs_page]);
+
+require(["jquery", "bootstrap"], function(JQuery, bootstrap){
+    // Chamando módulo principal para iniciar a aplicação
+    if (requirejs_page) requirejs([requirejs_page]);
+})
+

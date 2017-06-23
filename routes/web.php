@@ -1,6 +1,6 @@
 <?php 
 
-use Middleware\ExampleMiddleware; 
+use Middleware\AuthMiddleware; 
 
 /**
  * Routes: 
@@ -8,9 +8,14 @@ use Middleware\ExampleMiddleware;
  * 
  */
 
-$app->get('/', 	
-	function ($req, $res, $args) use ($container) { return (new Controller\HomeController($req, $res, $args, $container))->index(); });
-	//->add(new ExampleMiddleware()); //-> for add middleware
+//grupo de rotas autenticadas
+$app->group('', function () use ($container) {
+ 
+    $this->get('/', 		
+    	function ($req, $res, $args) use ($container) { return (new Controller\HomeController($req, $res, $args, $container))->index();});
+	
+    //TODO: Essa linha de baixo não funciona...
+	//$this->get('/{name}', 	routeCall('Controller\HomeController', 'index', $container));
 
-$app->get('/{name}', 	
-	function ($req, $res, $args) use ($container) { return (new Controller\HomeController($req, $res, $args, $container))->index(); });
+})->add(new AuthMiddleware());
+
