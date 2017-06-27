@@ -10,6 +10,6 @@ function dd($var)
 //TODO: Isso não funciona por algum motivo.
 function routeCall($controllerName, $methodName, $container)
 {
-	return (function ($req, $res, $args) use ($container) { return (new $controllerName($req, $res, $args, $container))->$methodName();});
+	return (function ($req, $res, $args) use ($controllerName, $methodName, $container) { return (new $controllerName($req, $res, $args, $container))->$methodName();});
 } 
 
