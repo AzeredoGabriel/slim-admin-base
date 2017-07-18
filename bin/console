@@ -1,0 +1,20 @@
+<?php
+
+set_time_limit(0);
+require __DIR__.'/../vendor/autoload.php';
+
+use Symfony\Component\Console\Application;
+use Symfony\Component\Console\Input\ArgvInput;
+
+$input = new ArgvInput($_SERVER['argv']);
+$application = new Application();
+
+/**
+ |
+ |	Register your custom commands
+ | 
+ */
+
+$application->add(new Command\DefaultCommand()); 
+
+$application->run($input);
